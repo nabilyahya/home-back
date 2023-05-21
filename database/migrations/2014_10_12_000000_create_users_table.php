@@ -16,7 +16,10 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
+            $table->string('phone')->unique();
             $table->string('password');
+            $table->string('work_type')->nullable(); // add type column for Wroker work type
+            $table->string('type'); // Add 'type' column for user roles
             $table->rememberToken();
             $table->timestamps();
         });
